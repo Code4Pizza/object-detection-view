@@ -78,7 +78,6 @@ public class LabelPopup extends PopupWindow {
               ((Activity) context).runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
-                  dismiss();
                   ((DetectorActivity) context).updateResults();
                 }
               });
@@ -86,6 +85,7 @@ public class LabelPopup extends PopupWindow {
             // More code here
           }
         });
+        dismiss();
       }
     });
     setContentView(view);
